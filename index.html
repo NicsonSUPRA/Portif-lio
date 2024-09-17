@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Nicson</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- pausado aos 58min -->
+    <main>
+        <img src="profile.jpeg" class="profile" />
+        <section class="detail-card">
+            <h1>Nicson Costa</h1>
+            <p>Olá, meu nome é Nicson Costa Antunes, sou desenvolvedor FullStack Java, desenvolvedor de APIs
+                e aqui apresento alguns dos meus projetos, obrigado por acessar meu portifólio!
+            </p>
+            <div class="projects">
+                <a href="https://github.com/NicsonSUPRA/clinicaOdontologica">Projeto Clinica Odontológica</a>
+                <a href="#">Projeto Calculadora</a>
+                <a href="#">API REST com Postgres</a>
+            </div>
+
+        </section>
+        <section class="social-links">
+            <a href="">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="">
+                <i class='bx bxl-linkedin-square'></i>
+            </a>
+            <a href="">
+                <i class='bx bxl-github'></i>
+            </a>
+
+            <a href="">
+                <i class='bx bxl-gmail'></i>
+            </a>
+        </section>
+    </main>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const pElement = document.querySelector('.detail-card p');
+        const text = pElement.textContent;
+        pElement.textContent = '';
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                pElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 65);
+            }
+        }
+
+        type();
+    });
+</script>
+
+
+</html>
